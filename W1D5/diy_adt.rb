@@ -6,6 +6,7 @@ class Stack
 
   def add(el)
     @container << el
+    el
   end
 
   def remove
@@ -13,7 +14,7 @@ class Stack
   end
 
   def show
-    @container.dup
+    p @container.dup
   end
 end
 
@@ -24,15 +25,16 @@ class Queue
   end
 
   def enqueue(el)
-    @container.unshift(el)
+    @container << el
+    el
   end
 
   def dequeue
-    @container.pop
+    @container.shift
   end
 
   def show
-    @container.dup
+    p @container.dup
   end
 end
 
@@ -44,7 +46,7 @@ class Map
 
   def assign(key, value)
     if all_keys.include?(key)
-      @container[location] = [key,value]
+      @container[lookup(key)] = [key, value]
     else
       @container << [key, value]
     end
@@ -62,16 +64,8 @@ class Map
   def all_keys
     @container.map {|arr| arr[0] }.flatten
   end
+
+  def show
+    p @container.dup
+  end
 end
-
-
-a = Stack.new
-b = Queue.new
-c = Map.new
-
-
-puts a.add(2)
-puts a.add(3)
-puts a.add(4)
-puts a.add(5)
-puts a.add(6)
