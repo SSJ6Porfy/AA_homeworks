@@ -16,7 +16,6 @@ class Mancala
       take_turn(current_player)
       current_player = current_player == @player1 ? @player2 : @player1
     end
-
     puts "The game is finished! #{winner_message}"
   end
 
@@ -44,7 +43,7 @@ class Mancala
   end
 
   def won?
-     @board.one_side_empty?
+    @board.one_side_empty?
   end
 
   def winner_message
