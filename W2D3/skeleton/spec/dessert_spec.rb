@@ -50,7 +50,9 @@ describe Dessert do
       ingredients.each do |ingredient|
         banana_nut_pudding.add_ingredient(ingredient)
       end
+
       banana_nut_pudding.mix!
+      
       expect(banana_nut_pudding.ingredients).not_to eq(["bananas", "nuts", "chocalate", "pudding mix"])
     end
   end
