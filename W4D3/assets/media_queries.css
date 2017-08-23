@@ -1,0 +1,37 @@
+.hamburger-dropdown {
+  display: none;
+}
+
+@media all and (max-width: 800px) {
+  nav ul {
+    display: none;
+  }
+
+  .hamburger-dropdown > li {
+    background: url(assets/hamburger.png) no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+
+  .hamburger-dropdown {
+    display: block;
+  }
+
+  .hamburger-dropdown ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    flex-direction: column;
+  }
+
+  .hamburger-dropdown:hover ul {
+    display: flex;
+  }
+
+  .hamburger-dropdown ul li:hover a {
+    text-decoration: underline;
+  }
+
+}

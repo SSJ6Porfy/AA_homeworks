@@ -1,0 +1,33 @@
+/* PHASE 3: Content */
+
+.content {
+  background: white;
+  margin: auto;
+  width: 80%;
+  border-left: #ccc solid 1px;
+  border-right: #ccc solid 1px;
+}
+
+.content-sidebar {
+  background: inherit;
+  width: 22%;
+  padding: 20px;
+  float: left;
+}
+
+.content-main {
+  background: inherit;
+  width: 68%;
+  padding: 20px;
+  float: left;
+}
+
+.content h1 {
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.content p {
+
+}
