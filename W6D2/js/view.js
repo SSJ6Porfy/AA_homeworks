@@ -21,7 +21,7 @@ View.prototype.exercise0 = function () {
 View.prototype.exercise1 = function () {
   //Challenge: Give every square the class 'orange'
   //Result: Every square should turn orange (we already have a CSS rule)
-
+  $(".square").addClass('orange');
   //your code here!
 };
 
@@ -30,6 +30,7 @@ View.prototype.exercise2 = function () {
   //Result: Every square vanishes
 
   //your code here!
+  $(".square").removeClass("square");
 };
 
 View.prototype.exercise3 = function () {
