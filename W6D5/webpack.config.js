@@ -1,19 +1,19 @@
 var path = require('path');
 
 module.exports = {
-  entry: "./frontend/my_app.jsx",
+  entry: "./entry.jsx",
   devtool: 'source-map',
   resolve: {
     extensions: ['.js', '.jsx', '*']
   },
   output: {
-      path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
+      path: path.resolve(__dirname),
       filename: "bundle.js"
   },
   module: {
     loaders: [
       {
-        test: [/\.jsx?$/],
+        test: [/\.jsx?$/, /\.js?$/],
         exclude: /(node-modules)/,
         loader: 'babel-loader',
         query: {
@@ -22,5 +22,4 @@ module.exports = {
       }
     ]
   }
-  ...
 };
