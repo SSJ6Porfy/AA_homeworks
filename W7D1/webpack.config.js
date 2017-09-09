@@ -5,13 +5,13 @@ module.exports = {
   context: __dirname,
   entry: "./frontend/entry.jsx",
   output: {
-    path: path.resolve(__dirname),  
+    path: path.resolve(__dirname),
     filename: "bundle.js"
   },
   module: {
     loaders: [
       {
-        test: [/\.jsx?$/],
+        test: [/\.jsx?$/, /\.js?$/],
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
